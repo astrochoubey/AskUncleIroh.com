@@ -16,7 +16,7 @@
 
     This project combines frontend design, backend development, and AI integration to simulate a personality-driven conversational system.
 
-✨ Features
+✨ Features:
 🍵 Ask Iroh – Enter a question and receive thoughtful advice
 🎭 Character-driven AI – Responses are styled with warmth, metaphor, and gentle humor
 🌙 Calm UI/UX – Minimal, soothing design with soft transitions
@@ -75,12 +75,13 @@ ask-uncle-iroh/
     Prompt engineering for personality simulation
     UX design focused on emotional interaction
 
-🌌 Future Improvements
-Conversation history (chat-style interface)
-Mood-based responses (anger, confusion, loss, etc.)
-Save and share quotes
-Daily wisdom feature
-Voice interaction
+🌌 Future Improvements:
+
+    Conversation history (chat-style interface)
+    Mood-based responses (anger, confusion, loss, etc.)
+    Save and share quotes
+    Daily wisdom feature
+    Voice interaction
 
 ⚠️ Disclaimer
 
