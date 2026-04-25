@@ -17,54 +17,59 @@
     This project combines frontend design, backend development, and AI integration to simulate a personality-driven conversational system.
 
 ✨ Features:
-🍵 Ask Iroh – Enter a question and receive thoughtful advice
-🎭 Character-driven AI – Responses are styled with warmth, metaphor, and gentle humor
-🌙 Calm UI/UX – Minimal, soothing design with soft transitions
-⏳ Tea Brewing Animation – Loading state designed as a “steeping tea” moment
-🧠 Prompt Engineering – Carefully crafted system prompts to maintain tone and personality
-🛠️ Tech Stack
-Frontend
-React
-Tailwind CSS
-(Optional) Framer Motion for animations
-Backend
-Node.js
-Express
-AI Integration
-LLM API (e.g., OpenAI)
+
+    🍵 Ask Iroh – Enter a question and receive thoughtful advice
+    🎭 Character-driven AI – Responses are styled with warmth, metaphor, and gentle humor
+    🌙 Calm UI/UX – Minimal, soothing design with soft transitions
+    ⏳ Tea Brewing Animation – Loading state designed as a “steeping tea” moment
+    🧠 Prompt Engineering – Carefully crafted system prompts to maintain tone and personality
+    🛠️ Tech Stack
+
+    Frontend
+        React
+        Tailwind CSS
+        (Optional) Framer Motion for animations
+    Backend
+        Node.js
+        Express
+    AI Integration
+        LLM API (e.g., OpenAI)
 
 ⚙️ How It Works
-User enters a question
-Frontend sends a POST request to the backend (/ask)
-Backend forwards the query to an AI model with a structured prompt
-AI generates a response in the style of Uncle Iroh
-Response is returned and displayed with animation
+
+    User enters a question
+    Frontend sends a POST request to the backend (/ask)
+    Backend forwards the query to an AI model with a structured prompt
+    AI generates a response in the style of Uncle Iroh
+    Response is returned and displayed with animation
 
 🧪 Example Prompt Design
-You are Uncle Iroh from Avatar: The Last Airbender.
 
-    Respond with:
-        - Warmth and wisdom
-        - Metaphors (tea, balance, nature)
-        - Gentle humor when appropriate
+    You are Uncle Iroh from Avatar: The Last Airbender.
 
-    Avoid:
-        - Modern slang
-        - Harsh or overly direct advice
+        Respond with:
+            - Warmth and wisdom
+            - Metaphors (tea, balance, nature)
+            - Gentle humor when appropriate
+
+        Avoid:
+            - Modern slang
+            - Harsh or overly direct advice
 
 📂 Project Structure
-ask-uncle-iroh/
-│
-├── frontend/
-│ ├── components/
-│ ├── pages/
-│ └── App.js
-│
-├── backend/
-│ ├── server.js
-│ └── routes/
-│
-└── README.md
+
+    ask-uncle-iroh/
+    │
+    ├── frontend/
+    │ ├── components/
+    │ ├── pages/
+    │ └── App.js
+    │
+    ├── backend/
+    │ ├── server.js
+    │ └── routes/
+    │
+    └── README.md
 
 🎯 Learning Outcomes
 
