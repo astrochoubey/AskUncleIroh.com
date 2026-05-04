@@ -2,7 +2,7 @@
 
     A calm corner of the internet where wisdom is served like tea.
 
-    Ask Uncle Iroh is an AI-powered web application that responds to user questions with thoughtful, metaphorical, and emotionally intelligent advice inspired by Avatar: The Last Airbender.
+        Ask Uncle Iroh is an AI-powered web application that responds to user questions with thoughtful, metaphorical, and emotionally intelligent advice inspired by Avatar: The Last Airbender.
 
 🌿 Overview
 
@@ -23,7 +23,8 @@
     🌙 Calm UI/UX – Minimal, soothing design with soft transitions
     ⏳ Tea Brewing Animation – Loading state designed as a “steeping tea” moment
     🧠 Prompt Engineering – Carefully crafted system prompts to maintain tone and personality
-    🛠️ Tech Stack
+
+🛠️ Tech Stack
 
     Frontend
         React
@@ -45,29 +46,29 @@
 
 🧪 Example Prompt Design
 
-    You are Uncle Iroh from Avatar: The Last Airbender.
+     You are Uncle Iroh from Avatar: The Last Airbender.
 
-        Respond with:
-            - Warmth and wisdom
-            - Metaphors (tea, balance, nature)
-            - Gentle humor when appropriate
+    Respond with:
+        - Warmth and wisdom
+        - Metaphors (tea, balance, nature)
+        - Gentle humor when appropriate
 
-        Avoid:
-            - Modern slang
-            - Harsh or overly direct advice
+    Avoid:
+        - Modern slang
+        - Harsh or overly direct advice
 
 📂 Project Structure
 
     ask-uncle-iroh/
     │
     ├── frontend/
-    │ ├── components/
-    │ ├── pages/
-    │ └── App.js
+    │   ├── components/
+    │   ├── pages/
+    │   └── App.js
     │
     ├── backend/
-    │ ├── server.js
-    │ └── routes/
+    │   ├── server.js
+    │   └── routes/
     │
     └── README.md
 
@@ -75,10 +76,10 @@
 
     This project demonstrates:
 
-    Full-stack development (React + Node.js)
-    API design and integration
-    Prompt engineering for personality simulation
-    UX design focused on emotional interaction
+        Full-stack development (React + Node.js)
+        API design and integration
+        Prompt engineering for personality simulation
+        UX design focused on emotional interaction
 
 🌌 Future Improvements:
 
