@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './styles/global.css';
 import UniverseCanvas from './components/UniverseCanvas';
 import Controls from './components/Controls';
+import StatsPanel from './components/StatsPanel';
+import ExpansionGraph from './components/ExpansionGraph';
 
 function App() {
   const [hubble, setHubble] = useState(70);
@@ -45,11 +47,11 @@ function App() {
         </section>
 
         <section className="stats">
-          Stats Panel
+          <StatsPanel hubble={hubble} redshift={redshift} />
         </section>
 
         <section className="graph">
-          Expansion Graph
+          <ExpansionGraph hubble={hubble} />
         </section>
 
       </div>
