@@ -331,10 +331,9 @@ input[type="range"]::-webkit-slider-thumb:hover {
   }
   .header {
     flex-direction: column;
-    text-align: center;
     gap: 15px;
   }
   .header-stats {
-    text-align: center;
+    text-align: left;
   }
 }
