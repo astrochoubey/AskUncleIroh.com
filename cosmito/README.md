@@ -1,16 +1,125 @@
-# React + Vite
+🌌 Cosmito
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    A modern web app for exploring the universe through interactive cosmology and astrophysics visualizations.
 
-Currently, two official plugins are available:
+    Cosmito is a React-based project built for students, space enthusiasts, and aspiring cosmologists who want to explore concepts like cosmic expansion, redshift, dark matter, spacetime, and the large-scale structure of the universe in a visual and intuitive way.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+    ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+        * 🌠 Interactive cosmology visualizations
+        * 📈 Real-time parameter controls and simulations
+        * 🌌 Beautiful space-inspired UI/UX
+        * ⚛️ Educational explanations for astrophysics concepts
+        * 📱 Responsive design for desktop and mobile
+        * 🚀 Fast React-based frontend
+        * 🎨 Animated cosmic backgrounds and transitions
 
-## Expanding the ESLint configuration
+    🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+        Frontend
+            * React
+            * Vite
+            * JavaScript
+            * CSS / Tailwind CSS *(optional depending on your setup)*
+
+        Libraries & Tools
+
+            * Framer Motion *(animations)*
+            * Recharts / Chart.js *(graphs and data visualizations)*
+            * React Icons
+            * Three.js *(optional for 3D visualizations)*
+
+    📚 Planned Modules
+
+        🌍 Cosmological Distance Calculator
+
+            Calculate:
+
+                * Comoving distance
+                * Luminosity distance
+                * Angular diameter distance
+                * Light travel time
+
+                Using customizable cosmological parameters.
+
+
+        🔴 Redshift Visualizer
+
+            Understand how redshift changes:
+
+                * Wavelength
+                * Observed galaxy spectra
+                * Cosmic expansion
+
+        🌌 Expansion of the Universe Simulation
+
+            Interactive simulation showing:
+
+                * Scale factor evolution
+                * Hubble expansion
+            * Matter vs dark energy dominated universes
+
+
+        ⭐ Stellar Evolution Timeline
+
+            Explore the lifecycle of stars:
+
+                * Protostars
+                * Main sequence
+                * Red giants
+                * Supernovae
+                * Neutron stars & black holes
+
+
+       🧠 Inspiration
+            Cosmito was inspired by the idea that cosmology should feel interactive, immersive, and visually beautiful instead of locked behind complicated equations and static textbooks.
+
+            The project combines computer science, physics, and design to create an experience that feels both educational and cinematic.
+
+
+       📂 Project Structure
+
+            ```bash
+            cosmito/
+            │
+            ├── public/
+            ├── src/
+            │   ├── components/
+            │   ├── pages/
+            │   ├── assets/
+            │   ├── data/
+            │   ├── styles/
+            │   └── App.jsx
+            │
+            ├── package.json
+            └── README.md
+            ```
+
+
+    🎯 Future Goals
+
+        * 🛰️ NASA API integration
+        * 🌍 Interactive sky maps
+        * 📡 Exoplanet explorer
+        * 🌠 3D spacetime simulations
+        * 🤖 AI-powered astrophysics assistant
+        * 📊 Research-grade cosmology tools
+
+
+    📖 Learning Goals
+
+            This project is also a learning journey in:
+
+            * React development
+            * Data visualization
+            * Scientific computing
+            * UI/UX design
+            * Computational cosmology concepts
+
+
+    🌌 Final Note
+
+        “Somewhere, something incredible is waiting to be known.” — Carl Sagan
+
+        Cosmito is built for curious minds looking up at the night sky and asking "why?"
