@@ -1,5 +1,5 @@
 {
-  "name": "jasmine-dragon",
+  "name": "cosmito",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "openai": "^6.36.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },
