@@ -1,9 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 
 function UniverseCanvas({ hubble = 70 }) {
 
     
-    const stars = Array.from({ length: 200 });
+    const stars = useMemo(() => {
+        return Array.from({ length: 200 }, () => ({
+            x: Math.random() * 100,
+            y: Math.random() * 100,
+            size: Math.random() * 2,
+        }));
+    }, []);
 
     
     const [galaxies, setGalaxies] = useState(() => {
@@ -67,21 +73,16 @@ function UniverseCanvas({ hubble = 70 }) {
         <div className="universe-container">
 
             
-            {stars.map((_, index) => {
-
-                const x = Math.random() * 100;
-                const y = Math.random() * 100;
-                const size = Math.random() * 2;
-
+            {stars.map((star, index) => {
                 return (
                     <div
                         key={index}
                         className="star"
                         style={{
-                            left: `${x}%`,
-                            top: `${y}%`,
-                            width: `${size}px`,
-                            height: `${size}px`,
+                            left: `${star.x}%`,
+                            top: `${star.y}%`,
+                            width: `${star.size}px`,
+                            height: `${star.size}px`,
                         }}
                     />
                 );

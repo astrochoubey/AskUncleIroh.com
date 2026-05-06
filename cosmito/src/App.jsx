@@ -39,8 +39,8 @@ function App() {
       <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
 
       {activeTab === 'simulation' ? (
-        <div className="main-grid">
-          <aside className="controls">
+        <div className="main-grid simulation-grid">
+          <aside className="controls panel">
             <Controls
               hubble={hubble} setHubble={setHubble}
               redshift={redshift} setRedshift={setRedshift}
@@ -49,14 +49,13 @@ function App() {
             />
           </aside>
 
-          <section className="universe">
+          <section className="universe panel">
             <UniverseCanvas hubble={hubble} />
           </section>
 
-          <section className="stats">
+          <section className="stats panel">
             <StatsPanel hubble={hubble} redshift={redshift} />
           </section>
-
         </div>
       ) : (
         <DistanceCalculator />

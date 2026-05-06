@@ -23,6 +23,13 @@ export default function DistanceCalculator() {
   const [om, setOm] = useState(OMEGA_M_DEFAULT);
   const [ol, setOl] = useState(OMEGA_L_DEFAULT);
 
+  const resetParameters = () => {
+    setZ(1.0);
+    setH0(HUBBLE_DEFAULT);
+    setOm(OMEGA_M_DEFAULT);
+    setOl(OMEGA_L_DEFAULT);
+  };
+
   const results = useMemo(() => calculateDistances(z, h0, om, ol), [z, h0, om, ol]);
 
   return (
@@ -32,8 +39,8 @@ export default function DistanceCalculator() {
       className="main-grid"
       style={{ gridTemplateRows: 'auto' }}
     >
-      <aside className="controls">
-        <h2 style={{ fontSize: '1.5rem', marginBottom: '20px', color: '#7dd3fc', fontFamily: "'Iceland', sans-serif" }}>Parameters</h2>
+      <aside className="controls panel">
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '20px', color: '#7dd3fc', fontFamily: "'Syne Mono', monospace" }}>Parameters</h2>
         
         <div className="control-group" style={{ marginBottom: '20px' }}>
           <label style={{ display: 'block', marginBottom: '8px', fontSize: '0.9rem', color: '#94a3b8' }}>
@@ -78,18 +85,22 @@ export default function DistanceCalculator() {
             style={{ width: '100%' }}
           />
         </div>
+
+        <button className="reset-button" onClick={resetParameters}>
+          RESET TO STANDARD
+        </button>
       </aside>
 
-      <section className="stats">
-        <h2 style={{ fontSize: '1.5rem', marginBottom: '20px', color: '#7dd3fc', fontFamily: "'Iceland', sans-serif" }}>Results</h2>
+      <section className="stats panel">
+        <h2 style={{ fontSize: '1.5rem', marginBottom: '20px', color: '#7dd3fc', fontFamily: "'Syne Mono', monospace" }}>Results</h2>
         <StatRow label="Comoving Distance" value={results.comoving} unit="Mpc" />
         <StatRow label="Luminosity Distance" value={results.luminosity} unit="Mpc" />
         <StatRow label="Angular Diameter Distance" value={results.angularDiameter} unit="Mpc" />
         <StatRow label="Light Travel Time" value={results.lookbackTime} unit="Byrs" />
         
-        <div style={{ marginTop: '30px', padding: '15px', background: 'rgba(125,211,252,0.1)', borderRadius: '12px', border: '1px solid rgba(125,211,252,0.2)' }}>
-          <p style={{ fontSize: '0.85rem', color: '#cbd5e1', lineHeight: '1.6' }}>
-            <strong style={{ color: '#7dd3fc' }}>Astrophysics Note:</strong> At z={z.toFixed(2)}, the photons we receive today left their source approximately {results.lookbackTime.toFixed(2)} billion years ago. Due to cosmic expansion, the object is now {results.comoving.toFixed(0)} Mpc away from us.
+        <div className="astrophysics-note">
+          <p>
+            <strong>Astrophysics Note:</strong> At z={z.toFixed(2)}, the photons we receive today left their source approximately {results.lookbackTime.toFixed(2)} billion years ago. Due to cosmic expansion, the object is now {results.comoving.toFixed(0)} Mpc away from us.
           </p>
         </div>
       </section>

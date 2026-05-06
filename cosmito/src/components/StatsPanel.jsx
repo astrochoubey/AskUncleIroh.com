@@ -20,37 +20,38 @@ export default function StatsPanel({ hubble, redshift }) {
   const expansionSpeed = hubble * distanceMpc;
 
   return (
-    <div className="stats-panel" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-      <h2 style={{ fontSize: '1.5rem', marginBottom: '0', color: '#7dd3fc', textAlign: 'center' }}>Physics Engine</h2>
+    <div className="stats-panel">
+      <h2>Physics Engine</h2>
       
-      <div className="stat-item" style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '8px' }}>
-        <span style={{ color: '#94a3b8' }}>Universe Age</span>
-        <span style={{ color: 'white', fontWeight: 'bold' }}>
-          <AnimatedNumber value={age} suffix=" Byrs" decimals={1} />
-        </span>
-      </div>
+      <div className="stats-grid">
+        <div className="stat-card">
+          <h3>Universe Age</h3>
+          <p>
+            <AnimatedNumber value={age} suffix=" Byrs" decimals={1} />
+          </p>
+        </div>
 
-      <div className="stat-item" style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '8px' }}>
-        <span style={{ color: '#94a3b8' }}>Scale Factor (a)</span>
-        <span style={{ color: 'white', fontWeight: 'bold' }}>
-          <AnimatedNumber value={scaleFactor} decimals={3} />
-        </span>
-      </div>
+        <div className="stat-card">
+          <h3>Scale Factor (a)</h3>
+          <p>
+            <AnimatedNumber value={scaleFactor} decimals={3} />
+          </p>
+        </div>
 
-      <div className="stat-item" style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '8px' }}>
-        <span style={{ color: '#94a3b8' }}>Redshift (z)</span>
-        <span style={{ color: 'white', fontWeight: 'bold' }}>
-          <AnimatedNumber value={redshift} decimals={1} />
-        </span>
-      </div>
+        <div className="stat-card">
+          <h3>Redshift (z)</h3>
+          <p>
+            <AnimatedNumber value={redshift} decimals={1} />
+          </p>
+        </div>
 
-      <div className="stat-item" style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '8px' }}>
-        <span style={{ color: '#94a3b8' }}>Expansion Speed (v)</span>
-        <span style={{ color: 'white', fontWeight: 'bold' }}>
-          <AnimatedNumber value={expansionSpeed} suffix=" km/s" decimals={0} />
-        </span>
+        <div className="stat-card">
+          <h3>Expansion Speed</h3>
+          <p>
+            <AnimatedNumber value={expansionSpeed} suffix=" km/s" decimals={0} />
+          </p>
+        </div>
       </div>
-
     </div>
   );
 }
