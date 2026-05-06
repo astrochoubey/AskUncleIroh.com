@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
 
 * {
   margin: 0;
@@ -51,8 +52,8 @@ body::before {
   letter-spacing: 6px;
   color: #fff;
   text-shadow: 
-    0 0 8px rgba(125, 211, 252, 0.3),
-    0 0 15px rgba(125, 211, 252, 0.1);
+    0 0 10px rgba(125, 211, 252, 0.4),
+    0 0 20px rgba(125, 211, 252, 0.2);
   line-height: 1.2;
   text-transform: uppercase;
 }
@@ -141,7 +142,7 @@ body::before {
 /* COMPONENT SPECIFICS */
 .controls h2 {
   font-family: 'Syne Mono', monospace;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #7dd3fc;
   margin-bottom: 1.5rem;
 }
@@ -230,7 +231,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 .stats-panel h2 {
   font-family: 'Syne Mono', monospace;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #7dd3fc;
   margin-bottom: 1.5rem;
   letter-spacing: 2px;
