@@ -21,14 +21,12 @@
             * React
             * Vite
             * JavaScript
-            * CSS / Tailwind CSS *(optional depending on your setup)*
+            * CSS
 
         Libraries & Tools
 
-            * Framer Motion *(animations)*
-            * Recharts / Chart.js *(graphs and data visualizations)*
-            * React Icons
-            * Three.js *(optional for 3D visualizations)*
+            * Framer Motion (animations)
+            * Recharts (graphs and data visualizations)
 
     📚 Planned Modules
 

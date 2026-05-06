@@ -1,4 +1,4 @@
-export default function Controls({ hubble, setHubble, redshift, setRedshift, darkEnergy, setDarkEnergy }) {
+export default function Controls({ hubble, setHubble, redshift, setRedshift, darkEnergy, setDarkEnergy, onReset }) {
   return (
     <div className="controls-panel" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
       <h2 style={{ fontSize: '1.5rem', marginBottom: '10px', color: '#7dd3fc', fontFamily: "'Iceland', sans-serif" }}>Parameters</h2>
@@ -45,6 +45,33 @@ export default function Controls({ hubble, setHubble, redshift, setRedshift, dar
           style={{ width: '100%' }}
         />
       </div>
+
+      <button 
+        onClick={onReset}
+        style={{
+          marginTop: '10px',
+          padding: '12px',
+          background: 'rgba(125, 211, 252, 0.1)',
+          border: '1px solid rgba(125, 211, 252, 0.3)',
+          borderRadius: '12px',
+          color: '#7dd3fc',
+          fontFamily: "'Syne Mono', monospace",
+          fontSize: '0.9rem',
+          cursor: 'pointer',
+          transition: 'all 0.3s ease',
+          letterSpacing: '1px'
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.background = 'rgba(125, 211, 252, 0.2)';
+          e.currentTarget.style.boxShadow = '0 0 15px rgba(125, 211, 252, 0.3)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.background = 'rgba(125, 211, 252, 0.1)';
+          e.currentTarget.style.boxShadow = 'none';
+        }}
+      >
+        RESET TO STANDARD
+      </button>
     </div>
   );
 }
