@@ -33,7 +33,7 @@ function AnimatedNumber({ value, suffix = "", decimals = 1 }) {
 export default function StatsPanel({ hubble, redshift }) {
   const age = 13.8 * (70 / hubble);
   const scaleFactor = 1 / (1 + redshift);
-  const distanceMpc = 10; // example observation distance
+  const distanceMpc = 10;
   const expansionSpeed = hubble * distanceMpc;
 
   return (
