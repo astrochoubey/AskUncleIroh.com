@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { calculateDistances } from '../data/cosmology';
 import { HUBBLE_DEFAULT, OMEGA_M_DEFAULT, OMEGA_L_DEFAULT } from '../data/constants';
-import { motion } from 'framer-motion';
 
 const StatRow = ({ label, value, unit }) => (
   <div className="stat-item" style={{ 
@@ -33,10 +32,8 @@ export default function DistanceCalculator() {
   const results = useMemo(() => calculateDistances(z, h0, om, ol), [z, h0, om, ol]);
 
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="main-grid"
+    <div 
+      className="main-grid fade-in"
       style={{ gridTemplateRows: 'auto' }}
     >
       <aside className="controls panel">
@@ -104,6 +101,6 @@ export default function DistanceCalculator() {
           </p>
         </div>
       </section>
-    </motion.div>
+    </div>
   );
 }

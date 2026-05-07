@@ -1,16 +1,33 @@
-import { useEffect } from "react";
-import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useEffect, useState, useRef } from "react";
 
 function AnimatedNumber({ value, suffix = "", decimals = 1 }) {
-  const count = useMotionValue(value);
-  const rounded = useTransform(count, (latest) => latest.toFixed(decimals) + suffix);
+  const [display, setDisplay] = useState(value);
+  const prevValue = useRef(value);
 
   useEffect(() => {
-    const controls = animate(count, value, { duration: 0.8, ease: "easeOut" });
-    return controls.stop;
-  }, [value, count]);
+    const from = prevValue.current;
+    const to = value;
+    prevValue.current = value;
 
-  return <motion.span>{rounded}</motion.span>;
+    const duration = 800;
+    const startTime = performance.now();
+
+    function tick(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // ease-out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplay(from + (to - from) * eased);
+
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      }
+    }
+
+    requestAnimationFrame(tick);
+  }, [value]);
+
+  return <span>{display.toFixed(decimals) + suffix}</span>;
 }
 
 export default function StatsPanel({ hubble, redshift }) {
